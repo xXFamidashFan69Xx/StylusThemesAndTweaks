@@ -1,0 +1,19 @@
+/* ==UserStyle==
+@name           Comically tall GIF picker
+@namespace      discord.com
+@version        1.0.0
+@description    Makes the gif/emoji/sticker picker resizable (it doesn't resize dinamically with the window, you have to close and reopen the picker to update it)
+@author         banana6000
+
+preprocessor default
+@var range scaleFactor "Scale factor" [1, 0, 1, 0.05]
+==/UserStyle== */
+
+@-moz-document domain("discord.com") {
+    .positionContainer__08434 {
+        height: calc(var(--reference-position-layer-max-height) * var(--scaleFactor));
+    }
+    .drawerSizingWrapper__08434 {
+        width: 800px;
+    }
+}
